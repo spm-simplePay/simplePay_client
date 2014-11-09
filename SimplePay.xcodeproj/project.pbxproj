@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		9EB3BCE51A0FC5FB000C70F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE41A0FC5FB000C70F0 /* main.m */; };
 		9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE71A0FC5FB000C70F0 /* AppDelegate.m */; };
-		9EB3BCEB1A0FC5FB000C70F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCEA1A0FC5FB000C70F0 /* ViewController.m */; };
+		9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */; };
 		9EB3BCEE1A0FC5FB000C70F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB3BCEC1A0FC5FB000C70F0 /* Main.storyboard */; };
 		9EB3BCF01A0FC5FB000C70F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB3BCEF1A0FC5FB000C70F0 /* Images.xcassets */; };
 		9EB3BCF31A0FC5FB000C70F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EB3BCF11A0FC5FB000C70F0 /* LaunchScreen.xib */; };
 		9EB3BCFF1A0FC5FB000C70F0 /* SimplePayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCFE1A0FC5FB000C70F0 /* SimplePayTests.m */; };
+		9EB3BD0C1A0FCBA1000C70F0 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD0B1A0FCBA1000C70F0 /* JSONHelper.m */; };
+		9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD0E1A0FCC24000C70F0 /* SQLResult.m */; };
+		9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */; };
+		9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD141A0FCE4A000C70F0 /* Tisch.m */; };
+		9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +37,24 @@
 		9EB3BCE41A0FC5FB000C70F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EB3BCE61A0FC5FB000C70F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9EB3BCE71A0FC5FB000C70F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9EB3BCE91A0FC5FB000C70F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9EB3BCEA1A0FC5FB000C70F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9EB3BCE91A0FC5FB000C70F0 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9EB3BCED1A0FC5FB000C70F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EB3BCEF1A0FC5FB000C70F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9EB3BCF21A0FC5FB000C70F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9EB3BCF81A0FC5FB000C70F0 /* SimplePayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplePayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB3BCFD1A0FC5FB000C70F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EB3BCFE1A0FC5FB000C70F0 /* SimplePayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePayTests.m; sourceTree = "<group>"; };
+		9EB3BD0A1A0FCBA1000C70F0 /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
+		9EB3BD0B1A0FCBA1000C70F0 /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
+		9EB3BD0D1A0FCC24000C70F0 /* SQLResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLResult.h; sourceTree = "<group>"; };
+		9EB3BD0E1A0FCC24000C70F0 /* SQLResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLResult.m; sourceTree = "<group>"; };
+		9EB3BD101A0FCD20000C70F0 /* DaySpecificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySpecificationViewController.h; sourceTree = "<group>"; };
+		9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySpecificationViewController.m; sourceTree = "<group>"; };
+		9EB3BD131A0FCE4A000C70F0 /* Tisch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tisch.h; sourceTree = "<group>"; };
+		9EB3BD141A0FCE4A000C70F0 /* Tisch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tisch.m; sourceTree = "<group>"; };
+		9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCardViewController.h; sourceTree = "<group>"; };
+		9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +96,16 @@
 		9EB3BCE11A0FC5FB000C70F0 /* SimplePay */ = {
 			isa = PBXGroup;
 			children = (
+				9EB3BD091A0FCB79000C70F0 /* WebService */,
+				9EB3BD081A0FCB71000C70F0 /* Entities */,
 				9EB3BCE61A0FC5FB000C70F0 /* AppDelegate.h */,
 				9EB3BCE71A0FC5FB000C70F0 /* AppDelegate.m */,
-				9EB3BCE91A0FC5FB000C70F0 /* ViewController.h */,
-				9EB3BCEA1A0FC5FB000C70F0 /* ViewController.m */,
+				9EB3BCE91A0FC5FB000C70F0 /* LoginViewController.h */,
+				9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */,
+				9EB3BD101A0FCD20000C70F0 /* DaySpecificationViewController.h */,
+				9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */,
+				9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */,
+				9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */,
 				9EB3BCEC1A0FC5FB000C70F0 /* Main.storyboard */,
 				9EB3BCEF1A0FC5FB000C70F0 /* Images.xcassets */,
 				9EB3BCF11A0FC5FB000C70F0 /* LaunchScreen.xib */,
@@ -117,6 +138,26 @@
 				9EB3BCFD1A0FC5FB000C70F0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EB3BD081A0FCB71000C70F0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9EB3BD131A0FCE4A000C70F0 /* Tisch.h */,
+				9EB3BD141A0FCE4A000C70F0 /* Tisch.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		9EB3BD091A0FCB79000C70F0 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				9EB3BD0A1A0FCBA1000C70F0 /* JSONHelper.h */,
+				9EB3BD0B1A0FCBA1000C70F0 /* JSONHelper.m */,
+				9EB3BD0D1A0FCC24000C70F0 /* SQLResult.h */,
+				9EB3BD0E1A0FCC24000C70F0 /* SQLResult.m */,
+			);
+			name = WebService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EB3BCEB1A0FC5FB000C70F0 /* ViewController.m in Sources */,
+				9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */,
+				9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */,
+				9EB3BD0C1A0FCBA1000C70F0 /* JSONHelper.m in Sources */,
+				9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */,
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
+				9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */,
+				9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */,
 				9EB3BCE51A0FC5FB000C70F0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

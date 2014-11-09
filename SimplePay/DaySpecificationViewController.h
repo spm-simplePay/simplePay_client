@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DaySpecificationViewController.h
 //  SimplePay
 //
 //  Created by Burak Colakoglu on 09.11.14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DaySpecificationViewController : UIViewController
 
 @end
-
