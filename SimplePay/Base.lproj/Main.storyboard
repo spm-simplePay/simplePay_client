@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Glr-Oz-S1r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dqA-nm-DPq">
+            <objects>
+                <navigationController id="Glr-Oz-S1r" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FES-Pv-gF9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="8gL-bB-EzK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3oh-AJ-Hr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="385"/>
+        </scene>
         <!--SimplePay-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -106,7 +122,7 @@
         <scene sceneID="6yi-Cc-f9g">
             <objects>
                 <navigationController id="AUW-MN-guK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menükarte" id="dea-dk-x6Y"/>
+                    <tabBarItem key="tabBarItem" title="Menükarte" image="icon_menucard" id="dea-dk-x6Y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Afj-Kk-5Lw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +139,7 @@
         <scene sceneID="Mkl-9f-8gK">
             <objects>
                 <navigationController id="sSQ-dg-m7A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Warenkorb" badgeValue="1" id="AKc-M8-0ra"/>
+                    <tabBarItem key="tabBarItem" title="Warenkorb" image="icon_cart" badgeValue="1" id="AKc-M8-0ra"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZnT-07-V1B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -159,7 +175,7 @@
         <scene sceneID="VBl-85-ryN">
             <objects>
                 <navigationController id="l0q-9o-m5j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bestellungen" id="Xnh-jY-4XW"/>
+                    <tabBarItem key="tabBarItem" title="Bestellungen" image="icon_order" id="Xnh-jY-4XW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7OV-v5-OMr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -203,7 +219,7 @@
         <scene sceneID="fdh-Bp-Jj6">
             <objects>
                 <navigationController id="8Mt-r9-ueO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Einstellungen" id="wa4-TB-9ic"/>
+                    <tabBarItem key="tabBarItem" title="Einstellungen" image="icon_settings" id="wa4-TB-9ic"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rNo-cy-FlW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -247,7 +263,7 @@
         <scene sceneID="UjQ-cp-Tw7">
             <objects>
                 <navigationController id="w3X-6A-3yu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tagesmenü" id="8Na-Ap-XEI"/>
+                    <tabBarItem key="tabBarItem" title="Tagesmenü" image="icon_dayspecification" id="8Na-Ap-XEI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kPY-Be-MIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -326,8 +342,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="AUW-MN-guK" kind="relationship" relationship="viewControllers" id="wzw-1t-Tbb"/>
                         <segue destination="w3X-6A-3yu" kind="relationship" relationship="viewControllers" id="KRf-ct-DCq"/>
+                        <segue destination="AUW-MN-guK" kind="relationship" relationship="viewControllers" id="wzw-1t-Tbb"/>
                         <segue destination="sSQ-dg-m7A" kind="relationship" relationship="viewControllers" id="BEt-GI-Q1b"/>
                         <segue destination="l0q-9o-m5j" kind="relationship" relationship="viewControllers" id="fz8-BI-zj6"/>
                         <segue destination="8Mt-r9-ueO" kind="relationship" relationship="viewControllers" id="WXa-el-kcR"/>
@@ -335,7 +351,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4s-cV-BRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351" y="385"/>
+            <point key="canvasLocation" x="335" y="385"/>
         </scene>
         <!--Registrieren-->
         <scene sceneID="TL8-jo-EwD">
@@ -364,6 +380,13 @@
             <point key="canvasLocation" x="162" y="1109"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_cart" width="30" height="30"/>
+        <image name="icon_dayspecification" width="30" height="30"/>
+        <image name="icon_menucard" width="30" height="30"/>
+        <image name="icon_order" width="30" height="30"/>
+        <image name="icon_settings" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
