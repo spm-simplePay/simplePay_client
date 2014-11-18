@@ -25,15 +25,63 @@
     [super tearDown];
 }
 
-- (void)testExample {
+
+// Diese Test-Methode prüft, ob Daten aus dem Server gelade werde können
+- (void)testGetValues {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    
+    
+    NSError *error = nil;
+    
+    NSString *serviceURL = [NSString stringWithFormat:@"%@", @"http://54.173.138.214/api/Values"];
+    
+    NSURL *url = [[NSURL alloc] initWithString:serviceURL];
+    
+    NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
+    
+    
+    if(!error){
+        
+        NSDictionary* json = [NSJSONSerialization
+                              JSONObjectWithData:data
+                              options:NSJSONReadingMutableContainers
+                              error:&error];
+        
+        if(!json) {
+        XCTAssert(YES, @"Pass");
+        } else {
+        XCTAssert(NO, @"Test Failure");
+        }
+        
+        
+    }else {
+    XCTAssert(NO, @"Test Failure");
+    }
+
 }
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        
+        NSError *error = nil;
+        
+        NSString *serviceURL = [NSString stringWithFormat:@"%@", @"http://54.173.138.214/api/Values"];
+        
+        NSURL *url = [[NSURL alloc] initWithString:serviceURL];
+        
+        NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
+        
+        
+        if(!error){
+            
+            NSDictionary* json = [NSJSONSerialization
+                                  JSONObjectWithData:data
+                                  options:NSJSONReadingMutableContainers
+                                  error:&error];
+   
+        }
+        
     }];
 }
 

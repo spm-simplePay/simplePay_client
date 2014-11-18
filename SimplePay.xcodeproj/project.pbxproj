@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E73AC4F1A1B77200046494D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E73AC4E1A1B77200046494D /* SettingsViewController.m */; };
 		9EB3BCE51A0FC5FB000C70F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE41A0FC5FB000C70F0 /* main.m */; };
 		9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE71A0FC5FB000C70F0 /* AppDelegate.m */; };
 		9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E73AC4D1A1B77200046494D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		9E73AC4E1A1B77200046494D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		9EB3BCDF1A0FC5FB000C70F0 /* SimplePay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB3BCE31A0FC5FB000C70F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EB3BCE41A0FC5FB000C70F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */,
 				9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */,
 				9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */,
+				9E73AC4D1A1B77200046494D /* SettingsViewController.h */,
+				9E73AC4E1A1B77200046494D /* SettingsViewController.m */,
 				9EB3BCEC1A0FC5FB000C70F0 /* Main.storyboard */,
 				9EB3BCEF1A0FC5FB000C70F0 /* Images.xcassets */,
 				9EB3BCF11A0FC5FB000C70F0 /* LaunchScreen.xib */,
@@ -263,6 +268,7 @@
 				9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */,
 				9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */,
 				9EB3BD0C1A0FCBA1000C70F0 /* JSONHelper.m in Sources */,
+				9E73AC4F1A1B77200046494D /* SettingsViewController.m in Sources */,
 				9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */,
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
 				9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */,
@@ -458,6 +464,7 @@
 				9EB3BD041A0FC5FB000C70F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EB3BD051A0FC5FB000C70F0 /* Build configuration list for PBXNativeTarget "SimplePayTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +473,7 @@
 				9EB3BD071A0FC5FB000C70F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

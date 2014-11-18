@@ -37,7 +37,7 @@
 - (IBAction)logout:(id)sender {
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RootNavigationController"];
     [[[[UIApplication sharedApplication] delegate] window] setRootViewController:vc];
     
 }
