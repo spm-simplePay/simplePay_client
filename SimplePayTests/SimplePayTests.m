@@ -47,7 +47,7 @@
                               options:NSJSONReadingMutableContainers
                               error:&error];
         
-        if(!json) {
+        if(json) {
         XCTAssert(YES, @"Pass");
         } else {
         XCTAssert(NO, @"Test Failure");
