@@ -54,10 +54,10 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSData *postData = [JSONdata dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+//    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+//  [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:postData];
     
     NSError *error;
@@ -89,9 +89,17 @@
         result.Exception = [NSString stringWithFormat:@"An exception occurred: %@", error.localizedDescription];
         return result;
     } else {
-        //Wenn die Abfrage erfolgreich ausgeführt wurde
-        result.WasSuccessful = 1;
-        NSLog(@"%@",resultString);
+        
+        if(![resultString containsString:@"error"]) {
+            //Wenn die Abfrage erfolgreich ausgeführt wurde
+            result.WasSuccessful = 1;
+            NSLog(@"%@",resultString);
+        } else {
+            result.WasSuccessful = 0;
+            NSLog(@"%@",resultString);
+        
+        }
+
     }
     
     NSLog(@"%li",(long)result.WasSuccessful);

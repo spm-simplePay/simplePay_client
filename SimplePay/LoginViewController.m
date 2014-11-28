@@ -24,4 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)removeKeyboard {
+    //Platzhalter um die Tastatur zu schließen
+    //Hier kann man auch ein Code schreiben
+}
+
 @end

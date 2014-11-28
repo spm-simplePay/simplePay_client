@@ -15,7 +15,8 @@
 
 @implementation MenuCardViewController
 
-#define SimplePaySeviceURL [NSURL URLWithString: @"http://54.173.138.214/api/Values"]
+#define SimplePaySeviceURL [NSURL URLWithString: @"http://54.173.138.214/api/Produkt"]
+
 @synthesize listOfProducts;
 
 - (void)viewDidLoad {

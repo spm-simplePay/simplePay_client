@@ -36,11 +36,17 @@
                                 <rect key="frame" x="39" y="128" width="252" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="sjA-L9-OEl"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwort" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfd-FK-gx5">
                                 <rect key="frame" x="39" y="185" width="252" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="ldc-Ct-DbK"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbL-WQ-i0f">
                                 <rect key="frame" x="126" y="432" width="69" height="30"/>
@@ -359,7 +365,7 @@
         <!--Registrieren-->
         <scene sceneID="TL8-jo-EwD">
             <objects>
-                <viewController id="zHG-IE-ilN" sceneMemberID="viewController">
+                <viewController id="zHG-IE-ilN" customClass="RegistrationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tn2-ap-9kl"/>
                         <viewControllerLayoutGuide type="bottom" id="Rd1-NY-X4a"/>
@@ -368,15 +374,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-E2-odu">
-                                <rect key="frame" x="38" y="127" width="245" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vorname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-E2-odu">
+                                <rect key="frame" x="38" y="77" width="245" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="H6z-x0-6WQ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nachname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-5c-KeG">
+                                <rect key="frame" x="38" y="110" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="Ib6-De-tLg"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Geburtstag" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NpV-uo-sm0">
+                                <rect key="frame" x="38" y="143" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="nwL-wc-QHo"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xP8-HD-h4f">
+                                <rect key="frame" x="38" y="176" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="w8W-aw-FZo"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Straße" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6t-Zy-uZk">
+                                <rect key="frame" x="38" y="208" width="163" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="ohA-Gb-H3Q"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hausnr." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCX-Vn-w1A">
+                                <rect key="frame" x="204" y="208" width="79" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="zmA-cC-28o"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PLZ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXm-o1-YrM">
+                                <rect key="frame" x="38" y="241" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="GZI-bf-vC9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ort" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wzw-tT-nbI">
+                                <rect key="frame" x="105" y="241" width="178" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="Zbs-eo-EQL"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwort" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gjr-Mn-Ooq">
+                                <rect key="frame" x="38" y="274" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="aa5-fB-9LP"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WS-UD-8YJ">
+                                <rect key="frame" x="119" y="493" width="82" height="30"/>
+                                <state key="normal" title="Registrieren">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_actionRegistration:" destination="zHG-IE-ilN" eventType="touchUpInside" id="WhA-eo-HuR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PayPin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gn-bN-Bwg">
+                                <rect key="frame" x="38" y="307" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="zHG-IE-ilN" eventType="editingDidEndOnExit" id="4iZ-0h-53L"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registrieren" id="g9P-kE-bbw"/>
+                    <connections>
+                        <outlet property="txt_birthday" destination="NpV-uo-sm0" id="GZE-9T-tMw"/>
+                        <outlet property="txt_email" destination="xP8-HD-h4f" id="uoh-gY-GJ2"/>
+                        <outlet property="txt_firstName" destination="ROm-E2-odu" id="r39-ju-sVi"/>
+                        <outlet property="txt_lastName" destination="eJz-5c-KeG" id="NHp-kf-dtQ"/>
+                        <outlet property="txt_number" destination="oCX-Vn-w1A" id="KBO-LL-8Je"/>
+                        <outlet property="txt_password" destination="Gjr-Mn-Ooq" id="VRE-wo-ylJ"/>
+                        <outlet property="txt_payPin" destination="5Gn-bN-Bwg" id="h0Z-Rg-cAl"/>
+                        <outlet property="txt_place" destination="Wzw-tT-nbI" id="HZM-ZQ-aVq"/>
+                        <outlet property="txt_postalCode" destination="OXm-o1-YrM" id="EJ2-ij-GRT"/>
+                        <outlet property="txt_street" destination="o6t-Zy-uZk" id="Anm-bS-FxF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2u-Ml-blJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

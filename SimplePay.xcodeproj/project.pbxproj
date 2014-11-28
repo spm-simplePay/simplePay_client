@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9E73AC4F1A1B77200046494D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E73AC4E1A1B77200046494D /* SettingsViewController.m */; };
+		9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D6D1A1CCF1D00D66960 /* Adresse.m */; };
+		9E9F9D711A1CCF3600D66960 /* Nutzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D701A1CCF3600D66960 /* Nutzer.m */; };
+		9E9F9D741A1CD09500D66960 /* Nutzerart.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D731A1CD09500D66960 /* Nutzerart.m */; };
+		9E9F9D771A1CDFBC00D66960 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D761A1CDFBC00D66960 /* RegistrationViewController.m */; };
 		9EB3BCE51A0FC5FB000C70F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE41A0FC5FB000C70F0 /* main.m */; };
 		9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE71A0FC5FB000C70F0 /* AppDelegate.m */; };
 		9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */; };
@@ -35,6 +39,14 @@
 /* Begin PBXFileReference section */
 		9E73AC4D1A1B77200046494D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		9E73AC4E1A1B77200046494D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		9E9F9D6C1A1CCF1D00D66960 /* Adresse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adresse.h; sourceTree = "<group>"; };
+		9E9F9D6D1A1CCF1D00D66960 /* Adresse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Adresse.m; sourceTree = "<group>"; };
+		9E9F9D6F1A1CCF3600D66960 /* Nutzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nutzer.h; sourceTree = "<group>"; };
+		9E9F9D701A1CCF3600D66960 /* Nutzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nutzer.m; sourceTree = "<group>"; };
+		9E9F9D721A1CD09500D66960 /* Nutzerart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nutzerart.h; sourceTree = "<group>"; };
+		9E9F9D731A1CD09500D66960 /* Nutzerart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nutzerart.m; sourceTree = "<group>"; };
+		9E9F9D751A1CDFBC00D66960 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		9E9F9D761A1CDFBC00D66960 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		9EB3BCDF1A0FC5FB000C70F0 /* SimplePay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB3BCE31A0FC5FB000C70F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EB3BCE41A0FC5FB000C70F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +117,8 @@
 				9EB3BCE71A0FC5FB000C70F0 /* AppDelegate.m */,
 				9EB3BCE91A0FC5FB000C70F0 /* LoginViewController.h */,
 				9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */,
+				9E9F9D751A1CDFBC00D66960 /* RegistrationViewController.h */,
+				9E9F9D761A1CDFBC00D66960 /* RegistrationViewController.m */,
 				9EB3BD101A0FCD20000C70F0 /* DaySpecificationViewController.h */,
 				9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */,
 				9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */,
@@ -150,6 +164,12 @@
 			children = (
 				9EB3BD131A0FCE4A000C70F0 /* Tisch.h */,
 				9EB3BD141A0FCE4A000C70F0 /* Tisch.m */,
+				9E9F9D6C1A1CCF1D00D66960 /* Adresse.h */,
+				9E9F9D6D1A1CCF1D00D66960 /* Adresse.m */,
+				9E9F9D6F1A1CCF3600D66960 /* Nutzer.h */,
+				9E9F9D701A1CCF3600D66960 /* Nutzer.m */,
+				9E9F9D721A1CD09500D66960 /* Nutzerart.h */,
+				9E9F9D731A1CD09500D66960 /* Nutzerart.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -272,7 +292,11 @@
 				9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */,
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
 				9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */,
+				9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */,
+				9E9F9D711A1CCF3600D66960 /* Nutzer.m in Sources */,
+				9E9F9D741A1CD09500D66960 /* Nutzerart.m in Sources */,
 				9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */,
+				9E9F9D771A1CDFBC00D66960 /* RegistrationViewController.m in Sources */,
 				9EB3BCE51A0FC5FB000C70F0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
