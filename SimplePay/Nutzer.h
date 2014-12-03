@@ -25,6 +25,7 @@
 @property Nutzerart* nutzerart;
 
 -(NSString*)getJsonNutzer;
+-(NSString*)getJsonUserLogin;
 
 
 

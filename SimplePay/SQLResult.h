@@ -12,6 +12,7 @@
 
 @property(nonatomic) NSInteger WasSuccessful;
 @property(strong, nonatomic) NSString * Exception;
+@property(strong, nonatomic) NSData *data;
 
 
 @end

@@ -54,7 +54,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="grW-GH-27M" kind="modal" id="EzO-BF-v8n"/>
+                                    <action selector="btn_actionLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JiQ-n8-7yc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSe-di-ymc">
@@ -72,6 +72,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="SimplePay" id="0ET-X9-64H"/>
+                    <connections>
+                        <outlet property="txt_email" destination="kpa-Fm-UU8" id="W4a-hD-SEG"/>
+                        <outlet property="txt_password" destination="vfd-FK-gx5" id="QbC-4K-YRW"/>
+                        <segue destination="grW-GH-27M" kind="modal" id="5gB-5E-f2S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,7 +347,7 @@
         <!--SimplePay-->
         <scene sceneID="xta-BG-HMG">
             <objects>
-                <tabBarController id="grW-GH-27M" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="grW-GH-27M" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="SimplePay" id="Fg7-q9-gTw"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bHR-Go-G4s">

@@ -27,7 +27,13 @@
     
     return JSON;
     
+}
+
+-(NSString*)getJsonUserLogin{
     
+    NSString* JSON = [NSString stringWithFormat:@"{\"email\":\"%@\",\"password\":\"%@\"}",email,passwort];
+    
+    return JSON;
     
 }
 

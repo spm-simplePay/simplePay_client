@@ -90,13 +90,16 @@
         return result;
     } else {
         
-        if(![resultString containsString:@"error"]) {
+        if([resultString isEqualToString:@"null"]) {
+            //Wenn die Abfrage nicht erfolgreich ausgeführt wurde
+            result.WasSuccessful = 0;
+        } else if([resultString containsString:@"error"]) {
+            //Wenn die Abfrage nicht erfolgreich ausgeführt wurde
+            result.WasSuccessful = 0;
+        } else {
             //Wenn die Abfrage erfolgreich ausgeführt wurde
             result.WasSuccessful = 1;
-            NSLog(@"%@",resultString);
-        } else {
-            result.WasSuccessful = 0;
-            NSLog(@"%@",resultString);
+            result.data = data;
         
         }
 

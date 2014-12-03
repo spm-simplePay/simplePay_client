@@ -12,5 +12,6 @@
 
 @synthesize WasSuccessful;
 @synthesize Exception;
+@synthesize data;
 
 @end
