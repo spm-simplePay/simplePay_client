@@ -19,6 +19,7 @@
 
 @synthesize listOfProducts;
 
+//Beim Laden der View die Produkte aus dem Backend laden
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,11 +31,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Anzahl der Produkte
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [listOfProducts count];
 }
 
+//TableView füllen
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"Cell";
@@ -57,7 +60,7 @@
     return cell;
 }
 
-
+//Produkte aus dem Backend laden
 -(void)getAllProducts{
     
     listOfProducts = nil;
