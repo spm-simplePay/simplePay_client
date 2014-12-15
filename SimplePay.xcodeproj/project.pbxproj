@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E73AC4F1A1B77200046494D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E73AC4E1A1B77200046494D /* SettingsViewController.m */; };
+		9E385F7C1A35A9A500A50770 /* ProductInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */; };
+		9E44EC901A35A249000DF2F3 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E44EC8F1A35A249000DF2F3 /* SettingsTableViewController.m */; };
 		9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D6D1A1CCF1D00D66960 /* Adresse.m */; };
 		9E9F9D711A1CCF3600D66960 /* Nutzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D701A1CCF3600D66960 /* Nutzer.m */; };
 		9E9F9D741A1CD09500D66960 /* Nutzerart.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D731A1CD09500D66960 /* Nutzerart.m */; };
 		9E9F9D771A1CDFBC00D66960 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D761A1CDFBC00D66960 /* RegistrationViewController.m */; };
+		9EA7AD441A35AA8800EDC999 /* Produkt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD431A35AA8800EDC999 /* Produkt.m */; };
+		9EA7AD481A35DF6D00EDC999 /* SharedCart.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD471A35DF6D00EDC999 /* SharedCart.m */; };
+		9EA7AD4B1A35E8A500EDC999 /* CartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7AD4A1A35E8A500EDC999 /* CartTableViewController.m */; };
 		9EB3BCE51A0FC5FB000C70F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE41A0FC5FB000C70F0 /* main.m */; };
 		9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCE71A0FC5FB000C70F0 /* AppDelegate.m */; };
 		9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */; };
@@ -24,6 +28,7 @@
 		9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */; };
 		9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD141A0FCE4A000C70F0 /* Tisch.m */; };
 		9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */; };
+		9EFA18391A372D090025E761 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA18381A372D090025E761 /* CartTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E73AC4D1A1B77200046494D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		9E73AC4E1A1B77200046494D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		9E385F7A1A35A9A500A50770 /* ProductInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInformationTableViewController.h; sourceTree = "<group>"; };
+		9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInformationTableViewController.m; sourceTree = "<group>"; };
+		9E44EC8E1A35A249000DF2F3 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		9E44EC8F1A35A249000DF2F3 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		9E9F9D6C1A1CCF1D00D66960 /* Adresse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adresse.h; sourceTree = "<group>"; };
 		9E9F9D6D1A1CCF1D00D66960 /* Adresse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Adresse.m; sourceTree = "<group>"; };
 		9E9F9D6F1A1CCF3600D66960 /* Nutzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nutzer.h; sourceTree = "<group>"; };
@@ -47,6 +54,12 @@
 		9E9F9D731A1CD09500D66960 /* Nutzerart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nutzerart.m; sourceTree = "<group>"; };
 		9E9F9D751A1CDFBC00D66960 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		9E9F9D761A1CDFBC00D66960 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		9EA7AD421A35AA8800EDC999 /* Produkt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produkt.h; sourceTree = "<group>"; };
+		9EA7AD431A35AA8800EDC999 /* Produkt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produkt.m; sourceTree = "<group>"; };
+		9EA7AD461A35DF6D00EDC999 /* SharedCart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedCart.h; sourceTree = "<group>"; };
+		9EA7AD471A35DF6D00EDC999 /* SharedCart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedCart.m; sourceTree = "<group>"; };
+		9EA7AD491A35E8A500EDC999 /* CartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTableViewController.h; sourceTree = "<group>"; };
+		9EA7AD4A1A35E8A500EDC999 /* CartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewController.m; sourceTree = "<group>"; };
 		9EB3BCDF1A0FC5FB000C70F0 /* SimplePay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB3BCE31A0FC5FB000C70F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EB3BCE41A0FC5FB000C70F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +83,8 @@
 		9EB3BD141A0FCE4A000C70F0 /* Tisch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tisch.m; sourceTree = "<group>"; };
 		9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCardViewController.h; sourceTree = "<group>"; };
 		9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCardViewController.m; sourceTree = "<group>"; };
+		9EFA18371A372D090025E761 /* CartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
+		9EFA18381A372D090025E761 /* CartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EA7AD451A35DF1A00EDC999 /* SharedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				9EA7AD461A35DF6D00EDC999 /* SharedCart.h */,
+				9EA7AD471A35DF6D00EDC999 /* SharedCart.m */,
+			);
+			name = SharedObjects;
+			sourceTree = "<group>";
+		};
 		9EB3BCD61A0FC5FB000C70F0 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +135,8 @@
 		9EB3BCE11A0FC5FB000C70F0 /* SimplePay */ = {
 			isa = PBXGroup;
 			children = (
+				9EFA18361A372CEF0025E761 /* Classes */,
+				9EA7AD451A35DF1A00EDC999 /* SharedObjects */,
 				9EB3BD091A0FCB79000C70F0 /* WebService */,
 				9EB3BD081A0FCB71000C70F0 /* Entities */,
 				9EB3BCE61A0FC5FB000C70F0 /* AppDelegate.h */,
@@ -123,8 +149,12 @@
 				9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */,
 				9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */,
 				9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */,
-				9E73AC4D1A1B77200046494D /* SettingsViewController.h */,
-				9E73AC4E1A1B77200046494D /* SettingsViewController.m */,
+				9E385F7A1A35A9A500A50770 /* ProductInformationTableViewController.h */,
+				9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */,
+				9EA7AD491A35E8A500EDC999 /* CartTableViewController.h */,
+				9EA7AD4A1A35E8A500EDC999 /* CartTableViewController.m */,
+				9E44EC8E1A35A249000DF2F3 /* SettingsTableViewController.h */,
+				9E44EC8F1A35A249000DF2F3 /* SettingsTableViewController.m */,
 				9EB3BCEC1A0FC5FB000C70F0 /* Main.storyboard */,
 				9EB3BCEF1A0FC5FB000C70F0 /* Images.xcassets */,
 				9EB3BCF11A0FC5FB000C70F0 /* LaunchScreen.xib */,
@@ -170,6 +200,8 @@
 				9E9F9D701A1CCF3600D66960 /* Nutzer.m */,
 				9E9F9D721A1CD09500D66960 /* Nutzerart.h */,
 				9E9F9D731A1CD09500D66960 /* Nutzerart.m */,
+				9EA7AD421A35AA8800EDC999 /* Produkt.h */,
+				9EA7AD431A35AA8800EDC999 /* Produkt.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -183,6 +215,15 @@
 				9EB3BD0E1A0FCC24000C70F0 /* SQLResult.m */,
 			);
 			name = WebService;
+			sourceTree = "<group>";
+		};
+		9EFA18361A372CEF0025E761 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9EFA18371A372D090025E761 /* CartTableViewCell.h */,
+				9EFA18381A372D090025E761 /* CartTableViewCell.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,15 +326,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA7AD4B1A35E8A500EDC999 /* CartTableViewController.m in Sources */,
+				9E44EC901A35A249000DF2F3 /* SettingsTableViewController.m in Sources */,
 				9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */,
 				9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */,
+				9EA7AD441A35AA8800EDC999 /* Produkt.m in Sources */,
 				9EB3BD0C1A0FCBA1000C70F0 /* JSONHelper.m in Sources */,
-				9E73AC4F1A1B77200046494D /* SettingsViewController.m in Sources */,
 				9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */,
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
 				9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */,
+				9EA7AD481A35DF6D00EDC999 /* SharedCart.m in Sources */,
 				9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */,
+				9E385F7C1A35A9A500A50770 /* ProductInformationTableViewController.m in Sources */,
 				9E9F9D711A1CCF3600D66960 /* Nutzer.m in Sources */,
+				9EFA18391A372D090025E761 /* CartTableViewCell.m in Sources */,
 				9E9F9D741A1CD09500D66960 /* Nutzerart.m in Sources */,
 				9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */,
 				9E9F9D771A1CDFBC00D66960 /* RegistrationViewController.m in Sources */,
@@ -373,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -408,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

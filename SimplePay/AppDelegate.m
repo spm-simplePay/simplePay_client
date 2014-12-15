@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SharedCart.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    //Liste in dem ShardObjekt 'SharedCart' inizieieren
+    
+    SharedCart *sharedManagerCart = [SharedCart sharedManager];
+    
+    sharedManagerCart.products = [[NSMutableArray alloc] init];
+    
     return YES;
 }
 
