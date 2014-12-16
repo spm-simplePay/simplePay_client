@@ -10,6 +10,7 @@
 #import "Tagesangebot.h"
 #import "Produkt.h"
 #import "DaySpecificationTableViewCell.h"
+#import "DaySpecificationInformationViewController.h"
 
 @interface DaySpecificationViewController ()
 
@@ -137,6 +138,22 @@
         }
         
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    
+    // if ([segue.identifier isEqualToString:@"showProductDetail"]) {
+    NSIndexPath *indexPath = nil;
+    Tagesangebot *ta = nil;
+    
+        indexPath = [self.daySpecificationTableView indexPathForSelectedRow];
+        ta = [listOfDaySpecification objectAtIndex:indexPath.row];
+    
+    DaySpecificationInformationViewController *destViewController = segue.destinationViewController;
+    destViewController.listOfProducts = ta.listOfProducts;
+    //  }
+
 }
 
 

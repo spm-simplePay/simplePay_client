@@ -121,7 +121,7 @@
                                 <connections>
                                     <outlet property="lb_daySpecificationtName" destination="9oZ-gK-mDM" id="uit-fO-1mr"/>
                                     <outlet property="lb_price" destination="iJ5-Au-chQ" id="1VD-FF-aRO"/>
-                                    <segue destination="01e-do-WpP" kind="push" id="tRe-Di-AGt"/>
+                                    <segue destination="8Xv-4I-wJZ" kind="push" id="sHn-jv-nPf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -145,24 +145,35 @@
             </objects>
             <point key="canvasLocation" x="1500" y="-307"/>
         </scene>
-        <!--Angebotdetails-->
-        <scene sceneID="HLc-sC-UP7">
+        <!--Day Specification Information View Controller-->
+        <scene sceneID="PBB-4K-H3r">
             <objects>
-                <viewController id="01e-do-WpP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sgl-Yh-hgd"/>
-                        <viewControllerLayoutGuide type="bottom" id="g9s-SN-US4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fx5-cG-ssM">
+                <tableViewController id="8Xv-4I-wJZ" customClass="DaySpecificationInformationViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dGs-zO-ioE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Angebotdetails" id="7xT-Ms-dS0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D4U-bS-gdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" id="k0H-mA-j62">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k0H-mA-j62" id="bsv-O6-bdo">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Xv-4I-wJZ" id="9Yn-rt-Vt6"/>
+                            <outlet property="delegate" destination="8Xv-4I-wJZ" id="zin-k9-geh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dBu-gq-aya"/>
+                    <connections>
+                        <outlet property="productTableView" destination="dGs-zO-ioE" id="jiK-8u-ms8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyU-yF-uRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="-302"/>
+            <point key="canvasLocation" x="1963" y="-307"/>
         </scene>
         <!--Menükarte-->
         <scene sceneID="6yi-Cc-f9g">

@@ -10,6 +10,7 @@
 		9E3365631A402B9E0002FBCB /* DaySpecificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3365621A402B9E0002FBCB /* DaySpecificationViewController.m */; };
 		9E3365661A402D280002FBCB /* Tagesangebot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3365651A402D280002FBCB /* Tagesangebot.m */; };
 		9E3365691A4035050002FBCB /* DaySpecificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3365681A4035050002FBCB /* DaySpecificationTableViewCell.m */; };
+		9E33656C1A4041080002FBCB /* DaySpecificationInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E33656B1A4041080002FBCB /* DaySpecificationInformationViewController.m */; };
 		9E385F7C1A35A9A500A50770 /* ProductInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */; };
 		9E44EC901A35A249000DF2F3 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E44EC8F1A35A249000DF2F3 /* SettingsTableViewController.m */; };
 		9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D6D1A1CCF1D00D66960 /* Adresse.m */; };
@@ -50,6 +51,8 @@
 		9E3365651A402D280002FBCB /* Tagesangebot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tagesangebot.m; sourceTree = "<group>"; };
 		9E3365671A4035050002FBCB /* DaySpecificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySpecificationTableViewCell.h; sourceTree = "<group>"; };
 		9E3365681A4035050002FBCB /* DaySpecificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySpecificationTableViewCell.m; sourceTree = "<group>"; };
+		9E33656A1A4041080002FBCB /* DaySpecificationInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DaySpecificationInformationViewController.h; path = ../DaySpecificationInformationViewController.h; sourceTree = "<group>"; };
+		9E33656B1A4041080002FBCB /* DaySpecificationInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DaySpecificationInformationViewController.m; path = ../DaySpecificationInformationViewController.m; sourceTree = "<group>"; };
 		9E385F7A1A35A9A500A50770 /* ProductInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInformationTableViewController.h; sourceTree = "<group>"; };
 		9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInformationTableViewController.m; sourceTree = "<group>"; };
 		9E44EC8E1A35A249000DF2F3 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				9E9F9D761A1CDFBC00D66960 /* RegistrationViewController.m */,
 				9E3365611A402B9E0002FBCB /* DaySpecificationViewController.h */,
 				9E3365621A402B9E0002FBCB /* DaySpecificationViewController.m */,
+				9E33656A1A4041080002FBCB /* DaySpecificationInformationViewController.h */,
+				9E33656B1A4041080002FBCB /* DaySpecificationInformationViewController.m */,
 				9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */,
 				9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */,
 				9E385F7A1A35A9A500A50770 /* ProductInformationTableViewController.h */,
@@ -348,6 +353,7 @@
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
 				9EA7AD481A35DF6D00EDC999 /* SharedCart.m in Sources */,
 				9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */,
+				9E33656C1A4041080002FBCB /* DaySpecificationInformationViewController.m in Sources */,
 				9E3365631A402B9E0002FBCB /* DaySpecificationViewController.m in Sources */,
 				9E385F7C1A35A9A500A50770 /* ProductInformationTableViewController.m in Sources */,
 				9E9F9D711A1CCF3600D66960 /* Nutzer.m in Sources */,
