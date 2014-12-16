@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3365631A402B9E0002FBCB /* DaySpecificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3365621A402B9E0002FBCB /* DaySpecificationViewController.m */; };
+		9E3365661A402D280002FBCB /* Tagesangebot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3365651A402D280002FBCB /* Tagesangebot.m */; };
+		9E3365691A4035050002FBCB /* DaySpecificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3365681A4035050002FBCB /* DaySpecificationTableViewCell.m */; };
 		9E385F7C1A35A9A500A50770 /* ProductInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */; };
 		9E44EC901A35A249000DF2F3 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E44EC8F1A35A249000DF2F3 /* SettingsTableViewController.m */; };
 		9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F9D6D1A1CCF1D00D66960 /* Adresse.m */; };
@@ -25,7 +28,6 @@
 		9EB3BCFF1A0FC5FB000C70F0 /* SimplePayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BCFE1A0FC5FB000C70F0 /* SimplePayTests.m */; };
 		9EB3BD0C1A0FCBA1000C70F0 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD0B1A0FCBA1000C70F0 /* JSONHelper.m */; };
 		9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD0E1A0FCC24000C70F0 /* SQLResult.m */; };
-		9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */; };
 		9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD141A0FCE4A000C70F0 /* Tisch.m */; };
 		9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */; };
 		9EFA18391A372D090025E761 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA18381A372D090025E761 /* CartTableViewCell.m */; };
@@ -42,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E3365611A402B9E0002FBCB /* DaySpecificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DaySpecificationViewController.h; path = ../DaySpecificationViewController.h; sourceTree = "<group>"; };
+		9E3365621A402B9E0002FBCB /* DaySpecificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DaySpecificationViewController.m; path = ../DaySpecificationViewController.m; sourceTree = "<group>"; };
+		9E3365641A402D280002FBCB /* Tagesangebot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tagesangebot.h; sourceTree = "<group>"; };
+		9E3365651A402D280002FBCB /* Tagesangebot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tagesangebot.m; sourceTree = "<group>"; };
+		9E3365671A4035050002FBCB /* DaySpecificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySpecificationTableViewCell.h; sourceTree = "<group>"; };
+		9E3365681A4035050002FBCB /* DaySpecificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySpecificationTableViewCell.m; sourceTree = "<group>"; };
 		9E385F7A1A35A9A500A50770 /* ProductInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInformationTableViewController.h; sourceTree = "<group>"; };
 		9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInformationTableViewController.m; sourceTree = "<group>"; };
 		9E44EC8E1A35A249000DF2F3 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
@@ -77,8 +85,6 @@
 		9EB3BD0B1A0FCBA1000C70F0 /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
 		9EB3BD0D1A0FCC24000C70F0 /* SQLResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLResult.h; sourceTree = "<group>"; };
 		9EB3BD0E1A0FCC24000C70F0 /* SQLResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLResult.m; sourceTree = "<group>"; };
-		9EB3BD101A0FCD20000C70F0 /* DaySpecificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySpecificationViewController.h; sourceTree = "<group>"; };
-		9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySpecificationViewController.m; sourceTree = "<group>"; };
 		9EB3BD131A0FCE4A000C70F0 /* Tisch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tisch.h; sourceTree = "<group>"; };
 		9EB3BD141A0FCE4A000C70F0 /* Tisch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tisch.m; sourceTree = "<group>"; };
 		9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCardViewController.h; sourceTree = "<group>"; };
@@ -145,8 +151,8 @@
 				9EB3BCEA1A0FC5FB000C70F0 /* LoginViewController.m */,
 				9E9F9D751A1CDFBC00D66960 /* RegistrationViewController.h */,
 				9E9F9D761A1CDFBC00D66960 /* RegistrationViewController.m */,
-				9EB3BD101A0FCD20000C70F0 /* DaySpecificationViewController.h */,
-				9EB3BD111A0FCD20000C70F0 /* DaySpecificationViewController.m */,
+				9E3365611A402B9E0002FBCB /* DaySpecificationViewController.h */,
+				9E3365621A402B9E0002FBCB /* DaySpecificationViewController.m */,
 				9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */,
 				9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */,
 				9E385F7A1A35A9A500A50770 /* ProductInformationTableViewController.h */,
@@ -202,6 +208,8 @@
 				9E9F9D731A1CD09500D66960 /* Nutzerart.m */,
 				9EA7AD421A35AA8800EDC999 /* Produkt.h */,
 				9EA7AD431A35AA8800EDC999 /* Produkt.m */,
+				9E3365641A402D280002FBCB /* Tagesangebot.h */,
+				9E3365651A402D280002FBCB /* Tagesangebot.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -222,6 +230,8 @@
 			children = (
 				9EFA18371A372D090025E761 /* CartTableViewCell.h */,
 				9EFA18381A372D090025E761 /* CartTableViewCell.m */,
+				9E3365671A4035050002FBCB /* DaySpecificationTableViewCell.h */,
+				9E3365681A4035050002FBCB /* DaySpecificationTableViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -333,10 +343,12 @@
 				9EA7AD441A35AA8800EDC999 /* Produkt.m in Sources */,
 				9EB3BD0C1A0FCBA1000C70F0 /* JSONHelper.m in Sources */,
 				9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */,
+				9E3365661A402D280002FBCB /* Tagesangebot.m in Sources */,
+				9E3365691A4035050002FBCB /* DaySpecificationTableViewCell.m in Sources */,
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
-				9EB3BD121A0FCD20000C70F0 /* DaySpecificationViewController.m in Sources */,
 				9EA7AD481A35DF6D00EDC999 /* SharedCart.m in Sources */,
 				9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */,
+				9E3365631A402B9E0002FBCB /* DaySpecificationViewController.m in Sources */,
 				9E385F7C1A35A9A500A50770 /* ProductInformationTableViewController.m in Sources */,
 				9E9F9D711A1CCF3600D66960 /* Nutzer.m in Sources */,
 				9EFA18391A372D090025E761 /* CartTableViewCell.m in Sources */,

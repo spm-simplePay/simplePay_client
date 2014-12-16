@@ -86,19 +86,41 @@
         <!--Tagesangebote-->
         <scene sceneID="mkF-Q7-BpE">
             <objects>
-                <viewController id="pn4-yK-Yea" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="UtP-Db-9Hz">
+                <viewController id="pn4-yK-Yea" customClass="DaySpecificationViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="UtP-Db-9Hz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" rowHeight="48" id="61K-Sm-MPl">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="61K-Sm-MPl" customClass="DaySpecificationTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="61K-Sm-MPl" id="KBU-mj-3Ed">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oZ-gK-mDM">
+                                            <rect key="frame" x="8" y="12" width="305" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ5-Au-chQ">
+                                            <rect key="frame" x="8" y="42" width="209" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nur solange der Vorrat reicht!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-OF-bsR">
+                                            <rect key="frame" x="8" y="68" width="248" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="lb_daySpecificationtName" destination="9oZ-gK-mDM" id="uit-fO-1mr"/>
+                                    <outlet property="lb_price" destination="iJ5-Au-chQ" id="1VD-FF-aRO"/>
                                     <segue destination="01e-do-WpP" kind="push" id="tRe-Di-AGt"/>
                                 </connections>
                             </tableViewCell>
@@ -107,6 +129,7 @@
                     <tabBarItem key="tabBarItem" title="Tagesangebote" id="LHM-aY-8Vc"/>
                     <navigationItem key="navigationItem" title="Tagesangebote" id="AgM-6u-Aad"/>
                     <connections>
+                        <outlet property="daySpecificationTableView" destination="UtP-Db-9Hz" id="DPN-CM-d6c"/>
                         <outlet property="searchDisplayController" destination="7kA-Fo-R2r" id="hyy-ql-agx"/>
                     </connections>
                 </viewController>
@@ -120,7 +143,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1500" y="-302"/>
+            <point key="canvasLocation" x="1500" y="-307"/>
         </scene>
         <!--Angebotdetails-->
         <scene sceneID="HLc-sC-UP7">
