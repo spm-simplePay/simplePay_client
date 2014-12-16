@@ -9,6 +9,7 @@
 #import "CartTableViewController.h"
 #import "SharedCart.h"
 #import "CartTableViewCell.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface CartTableViewController () {
     
@@ -95,6 +96,96 @@
 }
 
 
+-(void) startTouchID{
+    LAContext *myContext = [[LAContext alloc] init];
+    NSError *authError = nil;
+    NSString *myLocalizedReasonString = @"Zum Authentifizieren Bitte den Finger benutzen!";
+    if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+        
+        [myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                  localizedReason:myLocalizedReasonString
+                            reply:^(BOOL succes, NSError *error) {
+                                
+                                if (succes) {
+                                    
+                                    //[self showAlertViewWithTitle:@"Authentifizierung erfolgreich" andMessage:@"Hat funktioniert!"];
+                                    
+                                    [self showMessage:@"User hat sich authetifiziert" withTitle:@"SimplePay"];
+                                    NSLog(@"User authenticated");
+                                    
+                                } else {
+                                    
+                                    switch (error.code) {
+                                        case LAErrorAuthenticationFailed:
+                                            [self showMessage:@"Authentifizierung fehlgeschlagen" withTitle:@"SimplePay"];
+                                            NSLog(@"Authentication Failed");
+                                            break;
+                                            
+                                        case LAErrorUserCancel:
+                                            [self showMessage:@"Authentifizierung abgebrochen" withTitle:@"SimplePay"];
+                                            NSLog(@"User pressed Cancel button");
+                                            break;
+                                            
+                                        case LAErrorUserFallback:
+                                            [self showMessage:@"Passwort-Eingabe in Bearbeitung" withTitle:@"SimplePay"];
+                                            NSLog(@"User pressed \"Enter Password\"");
+                                            break;
+                                            
+                                        default:
+                                           [self showMessage:@"Error" withTitle:@"SimplePay"];
+                                            NSLog(@"Touch ID is not configured");
+                                            break;
+                                    }
+                                    
+                                    NSLog(@"Authentication Fails");
+                                }
+                            }];
+        
+    } else {
+        NSLog(@"Can not evaluate Touch ID");
+        [self showMessage:@"Error" withTitle:@"SimplePay"];
+    }
+    
+}
+
+-(void) showMessage:(NSString*)message withTitle:(NSString *)title
+{
+    
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:title
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"Cancel"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+    
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+-(void) showAlertViewWithTitle: (NSString*)title andMessage: (NSString*) message {
+    
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:title
+                              message:message
+                              delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+    
+    [alertView show];
+    
+    
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -146,5 +237,9 @@
     totalSum = 0.0;
     self.lb_totalSum.text = @"Keine Produkte im Warenkorb";
     
+}
+
+- (IBAction)btn_actionPostOrder:(id)sender {
+    [self startTouchID];
 }
 @end
