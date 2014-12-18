@@ -7,7 +7,8 @@
 //
 
 #import "MenuCardViewController.h"
-#import "Tisch.h"
+#import "Produkt.h"
+#import "ProductInformationTableViewController.h"
 
 @interface MenuCardViewController ()
 
@@ -18,6 +19,7 @@
 #define SimplePaySeviceURL [NSURL URLWithString: @"http://54.173.138.214/api/Produkt"]
 
 @synthesize listOfProducts;
+@synthesize searchResults;
 
 //Beim Laden der View die Produkte aus dem Backend laden
 - (void)viewDidLoad {
@@ -34,24 +36,44 @@
 //Anzahl der Produkte
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [listOfProducts count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+        
+    } else {
+        return [listOfProducts count];
+    }
+    
+
 }
 
 //TableView füllen
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = (UITableViewCell *)[self.productsTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    // Configure the cell...
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Tisch *t = [self.listOfProducts objectAtIndex:indexPath.row];
     
-    NSString *bezeichnung = t.bezeichnung;
-    NSString *eingetragen_am = t.eingetragen_am;
+    // Display recipe in the table cell
+    Produkt *recipe = nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        recipe = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        recipe = [listOfProducts objectAtIndex:indexPath.row];
+    }
+    
+    
+    //Produkt *p = [self.listOfProducts objectAtIndex:indexPath.row];
+    
+    //NSString *bezeichnung = p.bezeichnung;
+    
+    NSString *bezeichnung = recipe.bezeichnung;
     
     
     cell.textLabel.text = bezeichnung;
@@ -85,18 +107,19 @@
         
         for (NSDictionary* dict in json){
             
-            Tisch *t = [[Tisch alloc] init];
+            Produkt *p = [[Produkt alloc] init];
             
-            NSInteger t_id = [[dict objectForKey:@"t_id"]integerValue];
+            NSInteger p_id = [[dict objectForKey:@"p_id"]integerValue];
             NSString *bezeichnung = [dict objectForKey:@"bezeichnung"];
-            NSString *eingetragen_am = [dict objectForKey:@"eingetragen_am"];
+            NSNumber *preis = [dict objectForKey:@"preis"];
+            NSString *mengeneinheit = [dict objectForKey:@"mengeneinheit"];
 
-            t.t_id = t_id;
-            t.bezeichnung = bezeichnung;
-            t.eingetragen_am = eingetragen_am;
-
+            p.p_id = p_id;
+            p.bezeichnung = bezeichnung;
+            p.preis = preis;
+            p.mengeneinheit = mengeneinheit;
             
-            [listOfProducts addObject:t];
+            [listOfProducts addObject:p];
             
         }
         
@@ -104,15 +127,66 @@
 }
 
 
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
 
-/*
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"bezeichnung contains[c] %@", searchText];
+    searchResults = [listOfProducts filteredArrayUsingPredicate:resultPredicate];
+}
+
+
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    
+   // if ([segue.identifier isEqualToString:@"showProductDetail"]) {
+        NSIndexPath *indexPath = nil;
+        Produkt *p = nil;
+        
+        if (self.searchDisplayController.active) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            p = [searchResults objectAtIndex:indexPath.row];
+        } else {
+            indexPath = [self.productsTableView indexPathForSelectedRow];
+            p = [listOfProducts objectAtIndex:indexPath.row];
+        }
+        
+        ProductInformationTableViewController *destViewController = segue.destinationViewController;
+        destViewController.product = p;
+  //  }
+    
+//    
+//
+//    ProductInformationTableViewController *detailViewController = segue.destinationViewController;
+//    
+//    if (self.searchDisplayController.active) {
+//        NSIndexPath *selectedRowIndexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+//        detailViewController.product = [self.listOfProducts objectAtIndex:selectedRowIndexPath.row];
+//
+//    } else {
+//        NSIndexPath *selectedRowIndexPath = [self.productsTableView indexPathForSelectedRow];
+//        detailViewController.product = [self.listOfProducts objectAtIndex:selectedRowIndexPath.row];
+//
+//    }
+//
+//    
+//    
+//    NSIndexPath *selectedRowIndexPath = [self.productsTableView indexPathForSelectedRow];
+//    detailViewController.product = [self.listOfProducts objectAtIndex:selectedRowIndexPath.row];
 }
-*/
+
 
 @end

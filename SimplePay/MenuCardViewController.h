@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *productsTableView;
 
 @property (strong, nonatomic) NSMutableArray *listOfProducts;
+@property (strong, nonatomic) NSMutableArray *searchResults;
 
 @end
