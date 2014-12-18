@@ -58,6 +58,10 @@
 
 -(void) postUserRegistration {
     
+    NSError *error = nil;
+    NSInteger key = 0;
+    NSString *bezeichnung;
+    
     
     if([self textFieldValidation:[self view]]){
     
@@ -104,14 +108,22 @@
         
         SQLResult* result = [JSONHelper postJSONDataToURL:serviceURL JSONdata:JSON];
         
-        if (result.WasSuccessful == 1){
-            
-            [self showAlertViewWithTitle:@"Registrierung" andMessage:@"Hat funktioniert"];
+        NSDictionary* json = [NSJSONSerialization
+                              JSONObjectWithData:result.data
+                              options:NSJSONReadingMutableContainers
+                              error:&error];
+    
+        
+        key = [[json objectForKey:@"Key"]integerValue];
+        bezeichnung = [json objectForKey:@"Value"];
+        
+        
+        if (key == 0) {
+            [self showAlertViewWithTitle:@"Registrierung erfolgreich" andMessage:bezeichnung];
+        } else {
+            [self showAlertViewWithTitle:@"Registrierung fehlgeschlagen" andMessage:bezeichnung];
         }
-        else{
 
-            [self showAlertViewWithTitle:@"Registrierung" andMessage:@"Hat nicht funktioniert"];
-        }
     
     } else {
         
