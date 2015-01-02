@@ -11,6 +11,12 @@
 #import "CartTableViewCell.h"
 #import "PayPalMobile.h"
 #import <LocalAuthentication/LocalAuthentication.h>
+#import "Bestellposition.h"
+#import "Bestellung.h"
+#import "KundeTisch.h"
+#import "Nutzer.h"
+#import "SQLResult.h"
+#import "JSONHelper.h"
 
 @interface CartTableViewController () {
     
@@ -24,6 +30,8 @@
 @end
 
 @implementation CartTableViewController
+
+#define SimplePaySeviceURL [NSURL URLWithString: @"http://54.173.138.214/api"]
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -192,7 +200,7 @@
         [alertView show];
     }
                       
-                      - (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
+- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
                                             didCompletePayment:(PayPalPayment *)completedPayment
     {
         // Payment was processed successfully; send to server for verification and fulfillment.
@@ -208,9 +216,11 @@
         // Dismiss the PayPalPaymentViewController.
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zahlung erfolgreich" message:@"Die Zahlung wurde erfolgreich durchgeführt"
-                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zahlung erfolgreich" message:@"Die Zahlung wurde erfolgreich durchgeführt"
+//                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alertView show];
+        
+        [self postOrder];
     }
 
 
@@ -361,6 +371,76 @@
 }
 
 - (IBAction)btn_actionPostOrder:(id)sender {
+    
     [self startTouchID];
 }
+
+-(NSString*) makeOrderJson {
+    
+    Nutzer *user = [[Nutzer alloc] init];
+    Tisch *table = [[Tisch alloc] init];
+    KundeTisch *kt = [[KundeTisch alloc]init];
+    Bestellung *order = [[Bestellung alloc]init];
+    
+    user.n_id = 1;
+    table.t_id = 1;
+    
+    kt.tisch = table;
+    kt.kunde = user;
+    
+    order.kunde = user;
+    order.mwst_id = 1;
+    order.kundeTisch = kt;
+    
+    order.bestellpositionen = [[NSMutableArray alloc]init];
+    
+    for (SharedCart *obj in products){
+        
+        Bestellposition *bp = [[Bestellposition alloc]init];
+        bp.produkt = obj.product;
+        bp.menge = obj.quantity;
+        
+        [order.bestellpositionen addObject:bp];
+        
+    }
+    
+    NSString *json = order.getJsonBestellung;
+    
+    NSLog(@"%@",json);
+    
+    return json;
+
+}
+
+-(void) postOrder {
+    
+    NSError *error = nil;
+
+    NSString* JSON = [self makeOrderJson];
+    
+    NSLog(@"%@",JSON);
+    
+    NSString *serviceURL = [NSString stringWithFormat:@"%@%@", SimplePaySeviceURL,@"/Bestellung"];
+    
+    NSLog(@"%@",serviceURL);
+    
+    SQLResult* result = [JSONHelper postJSONDataToURL:serviceURL JSONdata:JSON];
+    
+    NSDictionary* json = [NSJSONSerialization
+                          JSONObjectWithData:result.data
+                          options:NSJSONReadingMutableContainers
+                          error:&error];
+    
+    NSLog(@"%li",(long)result.WasSuccessful);
+    
+    if (result.WasSuccessful == 1) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zahlung und Bestellung erfolgreich" message:@"Die Zahlung wurde erfolgreich durchgeführt und die Bestellung erfolgreich abgeschickt!"
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    
+    }
+}
+
+
 @end

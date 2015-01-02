@@ -31,7 +31,9 @@
 		9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD0E1A0FCC24000C70F0 /* SQLResult.m */; };
 		9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD141A0FCE4A000C70F0 /* Tisch.m */; };
 		9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */; };
-		9EC5F8BB1A55743A0040006B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8BA1A55743A0040006B /* Constants.m */; };
+		9EC5F8BE1A5695000040006B /* Bestellung.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8BD1A5695000040006B /* Bestellung.m */; };
+		9EC5F8C11A5695120040006B /* Bestellposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8C01A5695120040006B /* Bestellposition.m */; };
+		9EC5F8C41A56968E0040006B /* KundeTisch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8C31A56968E0040006B /* KundeTisch.m */; };
 		9EFA18391A372D090025E761 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA18381A372D090025E761 /* CartTableViewCell.m */; };
 		BE6D4B3A04D67CBA9F497121 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C461ECAB5061674DF9D7B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -95,8 +97,12 @@
 		9EB3BD141A0FCE4A000C70F0 /* Tisch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tisch.m; sourceTree = "<group>"; };
 		9EB3BD161A0FCF68000C70F0 /* MenuCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCardViewController.h; sourceTree = "<group>"; };
 		9EB3BD171A0FCF68000C70F0 /* MenuCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCardViewController.m; sourceTree = "<group>"; };
-		9EC5F8B91A55741E0040006B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		9EC5F8BA1A55743A0040006B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		9EC5F8BC1A5695000040006B /* Bestellung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bestellung.h; sourceTree = "<group>"; };
+		9EC5F8BD1A5695000040006B /* Bestellung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bestellung.m; sourceTree = "<group>"; };
+		9EC5F8BF1A5695120040006B /* Bestellposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bestellposition.h; sourceTree = "<group>"; };
+		9EC5F8C01A5695120040006B /* Bestellposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bestellposition.m; sourceTree = "<group>"; };
+		9EC5F8C21A56968E0040006B /* KundeTisch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KundeTisch.h; sourceTree = "<group>"; };
+		9EC5F8C31A56968E0040006B /* KundeTisch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KundeTisch.m; sourceTree = "<group>"; };
 		9EFA18371A372D090025E761 /* CartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
 		9EFA18381A372D090025E761 /* CartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		C360D4BDCBAB3B8B26ECFA33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,8 +194,6 @@
 				9EB3BCEF1A0FC5FB000C70F0 /* Images.xcassets */,
 				9EB3BCF11A0FC5FB000C70F0 /* LaunchScreen.xib */,
 				9EB3BCE21A0FC5FB000C70F0 /* Supporting Files */,
-				9EC5F8B91A55741E0040006B /* Constants.h */,
-				9EC5F8BA1A55743A0040006B /* Constants.m */,
 			);
 			path = SimplePay;
 			sourceTree = "<group>";
@@ -235,6 +239,12 @@
 				9EA7AD431A35AA8800EDC999 /* Produkt.m */,
 				9E3365641A402D280002FBCB /* Tagesangebot.h */,
 				9E3365651A402D280002FBCB /* Tagesangebot.m */,
+				9EC5F8BC1A5695000040006B /* Bestellung.h */,
+				9EC5F8BD1A5695000040006B /* Bestellung.m */,
+				9EC5F8BF1A5695120040006B /* Bestellposition.h */,
+				9EC5F8C01A5695120040006B /* Bestellposition.m */,
+				9EC5F8C21A56968E0040006B /* KundeTisch.h */,
+				9EC5F8C31A56968E0040006B /* KundeTisch.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -407,21 +417,23 @@
 			files = (
 				9EA7AD4B1A35E8A500EDC999 /* CartTableViewController.m in Sources */,
 				9E44EC901A35A249000DF2F3 /* SettingsTableViewController.m in Sources */,
+				9EC5F8BE1A5695000040006B /* Bestellung.m in Sources */,
 				9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */,
 				9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */,
 				9EA7AD441A35AA8800EDC999 /* Produkt.m in Sources */,
 				9EB3BD0C1A0FCBA1000C70F0 /* JSONHelper.m in Sources */,
 				9EB3BD0F1A0FCC24000C70F0 /* SQLResult.m in Sources */,
 				9E3365661A402D280002FBCB /* Tagesangebot.m in Sources */,
+				9EC5F8C41A56968E0040006B /* KundeTisch.m in Sources */,
 				9E3365691A4035050002FBCB /* DaySpecificationTableViewCell.m in Sources */,
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
 				9EA7AD481A35DF6D00EDC999 /* SharedCart.m in Sources */,
-				9EC5F8BB1A55743A0040006B /* Constants.m in Sources */,
 				9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */,
 				9E33656C1A4041080002FBCB /* DaySpecificationInformationViewController.m in Sources */,
 				9E3365631A402B9E0002FBCB /* DaySpecificationViewController.m in Sources */,
 				9E385F7C1A35A9A500A50770 /* ProductInformationTableViewController.m in Sources */,
 				9E9F9D711A1CCF3600D66960 /* Nutzer.m in Sources */,
+				9EC5F8C11A5695120040006B /* Bestellposition.m in Sources */,
 				9EFA18391A372D090025E761 /* CartTableViewCell.m in Sources */,
 				9E9F9D741A1CD09500D66960 /* Nutzerart.m in Sources */,
 				9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */,
