@@ -9,6 +9,7 @@
 #import "CartTableViewController.h"
 #import "SharedCart.h"
 #import "CartTableViewCell.h"
+#import "PayPalMobile.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
 @interface CartTableViewController () {
@@ -17,10 +18,21 @@
     double totalSum;
 
 }
+@property (strong, nonatomic, readwrite) PayPalConfiguration *payPalConfiguration;
+-(void) verifyCompletedPayment:(PayPalPayment *)completedPayment;
 
 @end
 
 @implementation CartTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _payPalConfiguration = [[PayPalConfiguration alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +48,18 @@
     self.tableView.tableFooterView = [UIView new];
 
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [PayPalMobile initializeWithClientIdsForEnvironments:
+     @{PayPalEnvironmentProduction : @"YOUR_CLIENT_ID_FOR_PRODUCTION",
+       PayPalEnvironmentSandbox : @"AUrmCxDwuIXIOE_8bObzX37H9M_ZRB5SyDbtDdJy38uOxhCjWPcFihdmt3WB"}];
+    
+    // Start out working with the test environment! When you are ready, switch to PayPalEnvironmentProduction.
+    [PayPalMobile preconnectWithEnvironment:PayPalEnvironmentSandbox];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,6 +119,101 @@
     
 }
 
+-(void) checkout {
+
+    // Create a PayPalPayment
+    PayPalPayment *payment = [[PayPalPayment alloc] init];
+    
+    // Amount, currency, and description
+    
+    NSDecimalNumber *doubleDecimal = [[NSDecimalNumber alloc] initWithDouble:totalSum];
+    
+    payment.amount = doubleDecimal;
+
+    payment.currencyCode = @"EUR";
+    payment.shortDescription = @"SimplePay";
+    
+    // Use the intent property to indicate that this is a "sale" payment,
+    // meaning combined Authorization + Capture. To perform Authorization only,
+    // and defer Capture to your server, use PayPalPaymentIntentAuthorize.
+    payment.intent = PayPalPaymentIntentSale;
+    
+    // Check whether payment is processable.
+    if (!payment.processable) {
+        // If, for example, the amount was negative or the shortDescription was empty, then
+        // this payment would not be processable. You would want to handle that here.
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Payment not processable"
+                                                            message:@"The payment is not processable"
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        
+        return;
+    }
+    
+    // Create a PayPalPaymentViewController.
+    PayPalPaymentViewController *paymentViewController;
+    paymentViewController = [[PayPalPaymentViewController alloc] initWithPayment:payment
+                                                                   configuration:self.payPalConfiguration
+                                                                        delegate:self];
+    
+    // Present the PayPalPaymentViewController.
+    
+    dispatch_async(dispatch_get_main_queue(), ^ {
+            [self.navigationController presentViewController:paymentViewController animated:YES completion:nil];
+    });
+    
+
+
+}
+                      
+- (void)verifyCompletedPayment:(PayPalPayment *)completedPayment
+    {
+        // Send the entire confirmation dictionary
+        NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation
+                                                               options:0
+                                                                 error:nil];
+        
+        // Send confirmation to your server; your server should verify the proof of payment
+        // and give the user their goods or services. If the server is not reachable, save
+        // the confirmation and try again later.
+    }
+                      
+                      
+#pragma mark - PayPalPayment Delegate
+                      
+- (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController
+    {
+        // The payment was canceled; dismiss the PayPalPaymentViewController.
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zahlung abgebrochen" message:@"Die Zahlung wurde abgebrochen"
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+                      
+                      - (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
+                                            didCompletePayment:(PayPalPayment *)completedPayment
+    {
+        // Payment was processed successfully; send to server for verification and fulfillment.
+        [self verifyCompletedPayment:completedPayment];
+        
+        // clear cart
+//        [Cart clearCart];
+//        [self.items removeAllObjects];
+//        [self.tableView reloadData];
+//        
+//        [(AppDelegate *)[[UIApplication sharedApplication] delegate] updateCartTabBadge];
+        
+        // Dismiss the PayPalPaymentViewController.
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zahlung erfolgreich" message:@"Die Zahlung wurde erfolgreich durchgeführt"
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+
+
 
 -(void) startTouchID{
     LAContext *myContext = [[LAContext alloc] init];
@@ -110,7 +229,9 @@
                                     
                                     //[self showAlertViewWithTitle:@"Authentifizierung erfolgreich" andMessage:@"Hat funktioniert!"];
                                     
-                                    [self showMessage:@"User hat sich authetifiziert" withTitle:@"SimplePay"];
+                                    //[self showMessage:@"User hat sich authetifiziert" withTitle:@"SimplePay"];
+                                    
+                                    [self checkout];
                                     NSLog(@"User authenticated");
                                     
                                 } else {
