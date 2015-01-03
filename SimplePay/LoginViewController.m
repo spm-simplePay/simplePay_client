@@ -10,6 +10,7 @@
 #import "Nutzer.h"
 #import "SQLResult.h"
 #import "JSONHelper.h"
+#import "SharedUser.h"
 
 @interface LoginViewController ()
 
@@ -38,6 +39,7 @@
 
 -(void) postUserLogin {
     
+    NSError *error = nil;
     
     if([self textFieldValidation:[self view]]){
         
@@ -53,11 +55,25 @@
         
         SQLResult* result = [JSONHelper postJSONDataToURL:serviceURL JSONdata:JSON];
         
+        
         if(result.WasSuccessful == 1) {
             
             UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"MainTabBarController"];
             [[[[UIApplication sharedApplication] delegate] window] setRootViewController:vc];
+            
+            //User in der Shared-Variable speichern
+            
+            NSDictionary* json = [NSJSONSerialization
+                                  JSONObjectWithData:result.data
+                                  options:NSJSONReadingMutableContainers
+                                  error:&error];
+            
+            Nutzer *loggedInUser = [[Nutzer alloc] init];
+            loggedInUser.n_id = [[json objectForKey:@"n_id"]integerValue];
+            
+            SharedUser *sharedManager = [SharedUser sharedManager];
+            sharedManager.user = loggedInUser;
         
         }else {
             [self showAlertViewWithTitle:@"Login" andMessage:@"Email oder Passwort falsch!"];

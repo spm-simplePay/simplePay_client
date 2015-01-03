@@ -34,6 +34,10 @@
 		9EC5F8BE1A5695000040006B /* Bestellung.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8BD1A5695000040006B /* Bestellung.m */; };
 		9EC5F8C11A5695120040006B /* Bestellposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8C01A5695120040006B /* Bestellposition.m */; };
 		9EC5F8C41A56968E0040006B /* KundeTisch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8C31A56968E0040006B /* KundeTisch.m */; };
+		9EC5F8CD1A56C6A90040006B /* OrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8CC1A56C6A90040006B /* OrdersTableViewController.m */; };
+		9EC5F8D01A56C7E00040006B /* SharedUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8CF1A56C7E00040006B /* SharedUser.m */; };
+		9EC5F8D31A56D2530040006B /* Quittung.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8D21A56D2530040006B /* Quittung.m */; };
+		9EC5F8D61A570C740040006B /* OrderPositionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5F8D51A570C740040006B /* OrderPositionTableViewController.m */; };
 		9EFA18391A372D090025E761 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA18381A372D090025E761 /* CartTableViewCell.m */; };
 		BE6D4B3A04D67CBA9F497121 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C461ECAB5061674DF9D7B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -103,6 +107,14 @@
 		9EC5F8C01A5695120040006B /* Bestellposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bestellposition.m; sourceTree = "<group>"; };
 		9EC5F8C21A56968E0040006B /* KundeTisch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KundeTisch.h; sourceTree = "<group>"; };
 		9EC5F8C31A56968E0040006B /* KundeTisch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KundeTisch.m; sourceTree = "<group>"; };
+		9EC5F8CB1A56C6A90040006B /* OrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersTableViewController.h; sourceTree = "<group>"; };
+		9EC5F8CC1A56C6A90040006B /* OrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersTableViewController.m; sourceTree = "<group>"; };
+		9EC5F8CE1A56C7E00040006B /* SharedUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedUser.h; sourceTree = "<group>"; };
+		9EC5F8CF1A56C7E00040006B /* SharedUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedUser.m; sourceTree = "<group>"; };
+		9EC5F8D11A56D2530040006B /* Quittung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quittung.h; sourceTree = "<group>"; };
+		9EC5F8D21A56D2530040006B /* Quittung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quittung.m; sourceTree = "<group>"; };
+		9EC5F8D41A570C740040006B /* OrderPositionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPositionTableViewController.h; sourceTree = "<group>"; };
+		9EC5F8D51A570C740040006B /* OrderPositionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPositionTableViewController.m; sourceTree = "<group>"; };
 		9EFA18371A372D090025E761 /* CartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
 		9EFA18381A372D090025E761 /* CartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		C360D4BDCBAB3B8B26ECFA33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +153,8 @@
 			children = (
 				9EA7AD461A35DF6D00EDC999 /* SharedCart.h */,
 				9EA7AD471A35DF6D00EDC999 /* SharedCart.m */,
+				9EC5F8CE1A56C7E00040006B /* SharedUser.h */,
+				9EC5F8CF1A56C7E00040006B /* SharedUser.m */,
 			);
 			name = SharedObjects;
 			sourceTree = "<group>";
@@ -188,6 +202,10 @@
 				9E385F7B1A35A9A500A50770 /* ProductInformationTableViewController.m */,
 				9EA7AD491A35E8A500EDC999 /* CartTableViewController.h */,
 				9EA7AD4A1A35E8A500EDC999 /* CartTableViewController.m */,
+				9EC5F8CB1A56C6A90040006B /* OrdersTableViewController.h */,
+				9EC5F8CC1A56C6A90040006B /* OrdersTableViewController.m */,
+				9EC5F8D41A570C740040006B /* OrderPositionTableViewController.h */,
+				9EC5F8D51A570C740040006B /* OrderPositionTableViewController.m */,
 				9E44EC8E1A35A249000DF2F3 /* SettingsTableViewController.h */,
 				9E44EC8F1A35A249000DF2F3 /* SettingsTableViewController.m */,
 				9EB3BCEC1A0FC5FB000C70F0 /* Main.storyboard */,
@@ -245,6 +263,8 @@
 				9EC5F8C01A5695120040006B /* Bestellposition.m */,
 				9EC5F8C21A56968E0040006B /* KundeTisch.h */,
 				9EC5F8C31A56968E0040006B /* KundeTisch.m */,
+				9EC5F8D11A56D2530040006B /* Quittung.h */,
+				9EC5F8D21A56D2530040006B /* Quittung.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -418,6 +438,7 @@
 				9EA7AD4B1A35E8A500EDC999 /* CartTableViewController.m in Sources */,
 				9E44EC901A35A249000DF2F3 /* SettingsTableViewController.m in Sources */,
 				9EC5F8BE1A5695000040006B /* Bestellung.m in Sources */,
+				9EC5F8CD1A56C6A90040006B /* OrdersTableViewController.m in Sources */,
 				9EB3BCEB1A0FC5FB000C70F0 /* LoginViewController.m in Sources */,
 				9EB3BD181A0FCF68000C70F0 /* MenuCardViewController.m in Sources */,
 				9EA7AD441A35AA8800EDC999 /* Produkt.m in Sources */,
@@ -427,6 +448,7 @@
 				9EC5F8C41A56968E0040006B /* KundeTisch.m in Sources */,
 				9E3365691A4035050002FBCB /* DaySpecificationTableViewCell.m in Sources */,
 				9EB3BCE81A0FC5FB000C70F0 /* AppDelegate.m in Sources */,
+				9EC5F8D01A56C7E00040006B /* SharedUser.m in Sources */,
 				9EA7AD481A35DF6D00EDC999 /* SharedCart.m in Sources */,
 				9E9F9D6E1A1CCF1D00D66960 /* Adresse.m in Sources */,
 				9E33656C1A4041080002FBCB /* DaySpecificationInformationViewController.m in Sources */,
@@ -438,7 +460,9 @@
 				9E9F9D741A1CD09500D66960 /* Nutzerart.m in Sources */,
 				9EB3BD151A0FCE4A000C70F0 /* Tisch.m in Sources */,
 				9E9F9D771A1CDFBC00D66960 /* RegistrationViewController.m in Sources */,
+				9EC5F8D61A570C740040006B /* OrderPositionTableViewController.m in Sources */,
 				9EB3BCE51A0FC5FB000C70F0 /* main.m in Sources */,
+				9EC5F8D31A56D2530040006B /* Quittung.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

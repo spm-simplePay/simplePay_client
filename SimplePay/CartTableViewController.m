@@ -17,6 +17,7 @@
 #import "Nutzer.h"
 #import "SQLResult.h"
 #import "JSONHelper.h"
+#import "SharedUser.h"
 
 @interface CartTableViewController () {
     
@@ -372,7 +373,13 @@
 
 - (IBAction)btn_actionPostOrder:(id)sender {
     
+    if ([products count] > 0) {
     [self startTouchID];
+    } else {
+        [self showAlertViewWithTitle:@"Bestellug" andMessage:@"Keine Produkte im Warenkorb"];
+    }
+    
+    
 }
 
 -(NSString*) makeOrderJson {
@@ -382,7 +389,10 @@
     KundeTisch *kt = [[KundeTisch alloc]init];
     Bestellung *order = [[Bestellung alloc]init];
     
-    user.n_id = 1;
+    SharedUser *sharedManager = [SharedUser sharedManager];
+    user = sharedManager.user;
+    
+    //user.n_id = 1;
     table.t_id = 1;
     
     kt.tisch = table;
@@ -426,18 +436,26 @@
     
     SQLResult* result = [JSONHelper postJSONDataToURL:serviceURL JSONdata:JSON];
     
-    NSDictionary* json = [NSJSONSerialization
-                          JSONObjectWithData:result.data
-                          options:NSJSONReadingMutableContainers
-                          error:&error];
+//    NSDictionary* json = [NSJSONSerialization
+//                          JSONObjectWithData:result.data
+//                          options:NSJSONReadingMutableContainers
+//                          error:&error];
     
     NSLog(@"%li",(long)result.WasSuccessful);
     
+    
+    //Wenn die Zahlung und Bestellung erfolgreich war!
     if (result.WasSuccessful == 1) {
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zahlung und Bestellung erfolgreich" message:@"Die Zahlung wurde erfolgreich durchgeführt und die Bestellung erfolgreich abgeschickt!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
+        
+        //Warenkorb leeren
+        [products removeAllObjects];
+        [self.tableView reloadData];
+        totalSum = 0.0;
+        self.lb_totalSum.text = @"Keine Produkte im Warenkorb";
     
     }
 }
