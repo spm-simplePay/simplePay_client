@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "Nutzer.h"
+#import "Adresse.h"
 #import "SQLResult.h"
 #import "JSONHelper.h"
 #import "SharedUser.h"
@@ -69,11 +70,32 @@
                                   options:NSJSONReadingMutableContainers
                                   error:&error];
             
-            Nutzer *loggedInUser = [[Nutzer alloc] init];
-            loggedInUser.n_id = [[json objectForKey:@"n_id"]integerValue];
             
-            SharedUser *sharedManager = [SharedUser sharedManager];
-            sharedManager.user = loggedInUser;
+                Nutzer *loggedInUser = [[Nutzer alloc] init];
+                Adresse *address = [[Adresse alloc] init];
+                
+                loggedInUser.n_id = [[json objectForKey:@"n_id"]integerValue];
+                loggedInUser.vorname = [json objectForKey:@"vorname"];
+                loggedInUser.nachname = [json objectForKey:@"nachname"];
+                loggedInUser.geburtstag = [json objectForKey:@"geburtstag"];
+                
+                //Adresse speichern
+                NSDictionary *dictAdresse = [json objectForKey:@"Adresse"];
+                    
+                address.strasse = [dictAdresse objectForKey:@"strasse"];
+                address.hausnummer =  [dictAdresse objectForKey:@"hausnummer"];
+                address.plz = [[dictAdresse objectForKey:@"plz"]integerValue];
+                address.ort = [dictAdresse objectForKey:@"strasse"];
+            
+                
+                
+                loggedInUser.adresse = address;
+                
+                SharedUser *sharedManager = [SharedUser sharedManager];
+                sharedManager.user = loggedInUser;
+            
+            
+        
         
         }else {
             [self showAlertViewWithTitle:@"Login" andMessage:@"Email oder Passwort falsch!"];
