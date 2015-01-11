@@ -77,7 +77,18 @@
                 loggedInUser.n_id = [[json objectForKey:@"n_id"]integerValue];
                 loggedInUser.vorname = [json objectForKey:@"vorname"];
                 loggedInUser.nachname = [json objectForKey:@"nachname"];
-                loggedInUser.geburtstag = [json objectForKey:@"geburtstag"];
+        
+                //Geburtstag formatieren
+                NSString *geburtstag =  [json objectForKey:@"geburtstag"];
+                geburtstag = [geburtstag componentsSeparatedByString:@"T"][0];
+            
+                NSString *day =  [geburtstag componentsSeparatedByString:@"-"][2];
+                NSString *month =  [geburtstag componentsSeparatedByString:@"-"][1];
+                NSString *year =  [geburtstag componentsSeparatedByString:@"-"][0];
+            
+                geburtstag = [NSString stringWithFormat:@"%@.%@.%@", day,month,year];
+                                         
+                loggedInUser.geburtstag = geburtstag;
                 
                 //Adresse speichern
                 NSDictionary *dictAdresse = [json objectForKey:@"Adresse"];

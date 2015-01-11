@@ -125,6 +125,12 @@
             NSString *datum =  [dict objectForKey:@"datum"];
             datum = [datum componentsSeparatedByString:@"T"][0];
             
+            NSString *day =  [datum componentsSeparatedByString:@"-"][2];
+            NSString *month =  [datum componentsSeparatedByString:@"-"][1];
+            NSString *year =  [datum componentsSeparatedByString:@"-"][0];
+            
+            datum = [NSString stringWithFormat:@"%@.%@.%@", day,month,year];
+            
             q.datum = datum;
             q.uhrzeit = [dict objectForKey:@"uhrzeit"];
             

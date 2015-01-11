@@ -26,7 +26,7 @@
 }
 
 
-// Diese Test-Methode prüft, ob Daten aus dem Server gelade werde können
+// Diese Test-Methode prüft, ob Daten aus dem Server geladen werde können!!!!!
 - (void)testGetValues {
     // This is an example of a functional test case.
     
