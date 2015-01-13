@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txt_password;
 
 - (IBAction)btn_actionLogin:(id)sender;
+-(void) postUserLogin;
 
 @end
 

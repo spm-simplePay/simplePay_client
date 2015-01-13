@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "LoginViewController.h"
 
 @interface SimplePayTests : XCTestCase
 
@@ -58,6 +59,17 @@
     XCTAssert(NO, @"Test Failure");
     }
 
+}
+
+
+-(void)testLogin {
+        
+     LoginViewController *view = (LoginViewController*)[[UIApplication sharedApplication] delegate];
+     view.txt_email.text = @"a";
+     view.txt_password.text =@"a";
+        
+     [view postUserLogin];
+    
 }
 
 - (void)testPerformanceExample {
